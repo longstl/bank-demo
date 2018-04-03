@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="418.0" prefWidth="663.0" style="-fx-background-color: #c4fff5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardMemberController">
+   <children>
+      <JFXButton fx:id="btnCheckBalance" layoutX="50.0" layoutY="241.0" onAction="#actCheckBalance" prefHeight="120.0" prefWidth="123.0" style="-fx-border-color: #bdcedd;" text="Check Balance" />
+      <JFXButton fx:id="btnWithDraw" layoutX="253.0" layoutY="241.0" onAction="#actWithDraw" prefHeight="120.0" prefWidth="123.0" style="-fx-border-color: #bdcedd;" text="With Draw" />
+      <JFXButton fx:id="btnSendMoney" layoutX="464.0" layoutY="241.0" onAction="#actSendMoney" prefHeight="120.0" prefWidth="123.0" style="-fx-border-color: #bdcedd;" text="Send Money" />
+      <JFXButton fx:id="btnSignOut" layoutX="21.0" layoutY="14.0" onAction="#actSignOut" prefHeight="25.0" prefWidth="91.0" style="-fx-border-color: #bdcedd;" text="Sign Out" />
+      <ImageView fitHeight="174.0" fitWidth="200.0" layoutX="238.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dashboard/member/icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

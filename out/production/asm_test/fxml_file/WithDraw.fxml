@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c4fff5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.WithDrawController">
+   <children>
+      <Label layoutX="151.0" layoutY="120.0" prefHeight="17.0" prefWidth="107.0" text="Account Number" />
+      <JFXTextField fx:id="txtAccountNumber" layoutX="151.0" layoutY="143.0" prefHeight="25.0" prefWidth="264.0" unFocusColor="#bdcedd" />
+      <Label layoutX="151.0" layoutY="206.0" prefHeight="17.0" prefWidth="65.0" text="Money Add" />
+      <JFXTextField fx:id="txtMoneyAdd" layoutX="151.0" layoutY="226.0" prefHeight="25.0" prefWidth="264.0" unFocusColor="#bdcedd" />
+      <JFXButton fx:id="btnCheck" layoutX="434.0" layoutY="143.0" onAction="#actCheck" style="-fx-border-color: #bdcedd;" text="Check" />
+      <JFXButton fx:id="btnAdd" layoutX="232.0" layoutY="291.0" onAction="#actAddMoney" prefHeight="25.0" prefWidth="80.0" style="-fx-border-color: #bdcedd;" text="Add" />
+      <JFXButton fx:id="btnBack" layoutX="14.0" layoutY="14.0" onAction="#actBack" style="-fx-border-color: #bdcedd;" text="Back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="414.0" prefWidth="690.0" style="-fx-background-color: #c4fff5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TransferMoneyController">
+   <children>
+      <Label layoutX="74.0" layoutY="146.0" prefHeight="17.0" prefWidth="167.0" text="Account Number Send Money" />
+      <Label layoutX="399.0" layoutY="146.0" prefHeight="17.0" prefWidth="187.0" text="Account Number Receive Money" />
+      <Label layoutX="74.0" layoutY="234.0" prefHeight="17.0" prefWidth="187.0" text="Amount Money Send" />
+      <JFXButton fx:id="btnBack" layoutX="14.0" layoutY="14.0" onAction="#actBack" prefHeight="25.0" prefWidth="69.0" style="-fx-border-color: #bdcedd;" text="Back" />
+      <JFXButton fx:id="btnTransfer" layoutX="74.0" layoutY="332.0" onAction="#actTransfer" prefHeight="25.0" prefWidth="122.0" style="-fx-border-color: #bdcedd;" text="Transfer" />
+      <JFXTextField fx:id="txtAccountSend" layoutX="74.0" layoutY="182.0" prefHeight="25.0" prefWidth="204.0" unFocusColor="#bdcedd" />
+      <JFXTextField fx:id="txtAccountReceive" layoutX="391.0" layoutY="182.0" prefHeight="25.0" prefWidth="204.0" unFocusColor="#bdcedd" />
+      <JFXTextField fx:id="txtAmmountSend" layoutX="74.0" layoutY="266.0" prefHeight="25.0" prefWidth="204.0" unFocusColor="#bdcedd" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="411.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/login/bank_icon.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnCheckSend" layoutX="286.0" layoutY="182.0" onAction="#actCheckSend" style="-fx-border-color: #bdcedd;" text="Check" />
+      <JFXButton fx:id="btnCheckReceive" layoutX="601.0" layoutY="182.0" onAction="#actCheckReceive" style="-fx-border-color: #bdcedd;" text="Check" />
+   </children>
+</AnchorPane>

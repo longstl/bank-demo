@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignInController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="350.0" style="-fx-background-color: #c4fff5;">
+         <children>
+            <Label layoutX="51.0" layoutY="272.0" prefHeight="17.0" prefWidth="64.0" text="Username: " />
+            <Label layoutX="51.0" layoutY="337.0" prefHeight="17.0" prefWidth="64.0" text="Password:" />
+            <Label layoutX="50.0" layoutY="398.0" prefHeight="17.0" prefWidth="32.0" text="Role:" />
+            <JFXTextField fx:id="txtUsername" layoutX="51.0" layoutY="300.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#bdcedd" />
+            <JFXPasswordField fx:id="txtPassword" layoutX="51.0" layoutY="362.0" prefHeight="25.0" prefWidth="250.0" unFocusColor="#bdcedd" />
+            <JFXTextField fx:id="txtRole" layoutX="50.0" layoutY="419.0" prefHeight="25.0" prefWidth="250.0" promptText="member / admin" unFocusColor="#bdcedd" />
+            <JFXButton fx:id="btnSignIn" alignment="CENTER_RIGHT" layoutX="117.0" layoutY="482.0" onAction="#actSignIn" prefHeight="39.0" prefWidth="111.0" ripplerFill="#515151" style="-fx-border-color: #bdcedd;" text="Sign In" />
+            <ImageView fitHeight="182.0" fitWidth="203.0" layoutX="82.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/login/bank_icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="134.0" layoutY="487.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/login/login.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>

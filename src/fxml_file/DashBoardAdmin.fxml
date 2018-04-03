@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="418.0" prefWidth="663.0" style="-fx-background-color: #c4fff5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardAdminController">
+   <children>
+      <JFXButton fx:id="btnSignUp" layoutX="116.0" layoutY="220.0" onAction="#actSignUp" prefHeight="130.0" prefWidth="151.0" style="-fx-border-color: #bdcedd;" text="Sign Up" />
+      <JFXButton fx:id="btnAddMoney" layoutX="402.0" layoutY="220.0" onAction="#actAddMoney" prefHeight="130.0" prefWidth="151.0" style="-fx-border-color: #bdcedd;" text="Add Money" />
+      <ImageView fitHeight="175.0" fitWidth="200.0" layoutX="232.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/dashboard/admin/icondash.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSignOut" layoutX="30.0" layoutY="17.0" onAction="#actSignOut" prefHeight="25.0" prefWidth="67.0" style="-fx-border-color: #bdcedd;" text="Sign Out" />
+   </children>
+</AnchorPane>
