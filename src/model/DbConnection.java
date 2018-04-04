@@ -8,7 +8,7 @@ public class DbConnection {
 
     private Connection connection = null;
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/assignment_data", "root", "");
