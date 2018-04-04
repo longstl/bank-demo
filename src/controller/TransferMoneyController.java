@@ -1,25 +1,17 @@
 package controller;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
-import java.io.IOException;
 import java.net.URL;
-import java.sql.*;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.CheckAccountNumberModel;
 import model.TransferMoneyModel;
-
-import javax.swing.*;
 
 public class TransferMoneyController implements Initializable {
 
