@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DashBoardAdminController implements Initializable{
+public class DashBoardAdminController implements Initializable {
 
     @FXML
     private JFXButton btnSignUp;
@@ -26,73 +26,26 @@ public class DashBoardAdminController implements Initializable{
     @FXML
     private JFXButton btnSignOut;
 
+    FormController formController = new FormController();
     public void actSignUp(ActionEvent actionEvent) {
-        signUp();
+        formController.signUp();
         Stage stage = (Stage) btnSignUp.getScene().getWindow();
         stage.hide();
     }
 
     public void actAddMoney(ActionEvent actionEvent) {
-        addMoney();
+        formController.addMoney();
         Stage stage = (Stage) btnAddMoney.getScene().getWindow();
         stage.hide();
     }
 
     public void actSignOut(ActionEvent actionEvent) {
         JOptionPane.showMessageDialog(null, "Goodbye!!! See you again!!!");
-        signInForm();
+        formController.signInForm();
         Stage stage = (Stage) btnSignOut.getScene().getWindow();
         stage.hide();
     }
 
-    @FXML
-    public void signUp() {
-        Parent root;
-
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxml_file/SignUpForm.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("Bank Account Sign Up");
-            Image icon = new Image(getClass().getResourceAsStream("/images/icon.png"));
-            stage.getIcons().add(icon);
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void addMoney(){
-        Parent root;
-
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxml_file/AddMoney.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("Bank Add Money");
-            Image icon = new Image(getClass().getResourceAsStream("/images/icon.png"));
-            stage.getIcons().add(icon);
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void signInForm(){
-        Parent root;
-
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxml_file/SignInForm.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("Bank Account Sign In");
-            Image icon = new Image(getClass().getResourceAsStream("/images/icon.png"));
-            stage.getIcons().add(icon);
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

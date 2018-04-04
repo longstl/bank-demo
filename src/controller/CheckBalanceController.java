@@ -10,6 +10,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import model.AddMoneyModel;
+import model.CheckAccountNumberModel;
 
 import javax.swing.*;
 import java.io.IOException;
@@ -29,53 +31,20 @@ public class CheckBalanceController implements Initializable {
     @FXML
     private JFXTextField txtAccountNumber;
 
+    FormController formController = new FormController();
+    CheckAccountNumberModel checkAccountNumberModel = new CheckAccountNumberModel();
+
     public void actBack(ActionEvent actionEvent) {
-        memberManagerForm();
+        formController.memberManagerForm();
         Stage stage = (Stage) btnBack.getScene().getWindow();
         stage.hide();
     }
 
     public void actCheck(ActionEvent actionEvent) {
         String accountNumber = txtAccountNumber.getText();
-
-        Connection connection = null;
-        try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/assignment_data", "root", "");
-            System.out.println("Connection Success!!!");
-            String query = "SELECT * FROM account WHERE numberAccount = " +
-                    "'" +
-                    accountNumber +
-                    "'" +
-                    "";
-            Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery(query);
-            if (rs.next()) {
-                Double checkBalance = rs.getDouble("balance");
-                JOptionPane.showMessageDialog(null, "Balance: " + checkBalance);
-            } else {
-                JOptionPane.showMessageDialog(null, "Account Number is not exist.");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        checkAccountNumberModel.checkAccount(accountNumber);
     }
 
-    @FXML
-    public void memberManagerForm() {
-        Parent root;
-
-        try {
-            root = FXMLLoader.load(getClass().getResource("../fxml_file/DashBoardMember.fxml"));
-            Stage stage = new Stage();
-            stage.setTitle("Bank Account Member DashBoard");
-            Image icon = new Image(getClass().getResourceAsStream("/images/icon.png"));
-            stage.getIcons().add(icon);
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
